@@ -20,7 +20,7 @@ public abstract class UiLauncherModule {
 	@Provides
 	@Singleton
 	static ResourceBundle provideLocalization() {
-		return ResourceBundle.getBundle("i18n.strings");
+		return ResourceBundle.getBundle("i18n.strings", Locale.SIMPLIFIED_CHINESE);
 	}
 
 	@Provides

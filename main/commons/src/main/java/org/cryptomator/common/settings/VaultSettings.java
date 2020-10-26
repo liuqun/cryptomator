@@ -78,21 +78,22 @@ public class VaultSettings {
 	//visible for testing
 	String normalizeDisplayName() {
 		String normalizedMountName = StringUtils.stripAccents(displayName.get());
-		StringBuilder builder = new StringBuilder();
-		for (char c : normalizedMountName.toCharArray()) {
-			if (Character.isWhitespace(c)) {
-				if (builder.length() == 0 || builder.charAt(builder.length() - 1) != '_') {
-					builder.append('_');
-				}
-			} else if (c < 127 && Character.isLetterOrDigit(c)) {
-				builder.append(c);
-			} else {
-				if (builder.length() == 0 || builder.charAt(builder.length() - 1) != '_') {
-					builder.append('_');
-				}
-			}
-		}
-		return builder.toString();
+		return normalizedMountName;
+//		StringBuilder builder = new StringBuilder();
+//		for (char c : normalizedMountName.toCharArray()) {
+//			if (Character.isWhitespace(c)) {
+//				if (builder.length() == 0 || builder.charAt(builder.length() - 1) != '_') {
+//					builder.append('_');
+//				}
+//			} else if (c < 127 && Character.isLetterOrDigit(c)) {
+//				builder.append(c);
+//			} else {
+//				if (builder.length() == 0 || builder.charAt(builder.length() - 1) != '_') {
+//					builder.append('_');
+//				}
+//			}
+//		}
+//		return builder.toString();
 	}
 
 	/* Getter/Setter */
